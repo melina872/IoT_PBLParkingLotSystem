@@ -59,22 +59,12 @@ void loop() {
   // --- LED Parking Conditions ---
   // -- When Parking Space Taken --
   if (distance < 20){
-    Serial.println("Parking Taken");
-    Serial.println(distance);
-    digitalWrite(redPin, HIGH);
-    digitalWrite(greenPin, LOW);
-    digitalWrite(bluePin, LOW);
-
+    parkingTaken();
   }
   
   // -- When Parking Space Available --
   else{
-    Serial.println("Parking Available");
-    Serial.println(distance);
-    digitalWrite(redPin, LOW);
-    digitalWrite(greenPin, HIGH);
-    digitalWrite(bluePin, LOW);
-    
+    parkingAvailable();
   }
 
 }
