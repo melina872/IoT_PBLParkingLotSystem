@@ -22,6 +22,24 @@ long getDistance(){
 
 }
 
+void parkingTaken(){
+  float distance = getDistance();
+  Serial.println("Parking Taken");
+  Serial.println(distance);
+  digitalWrite(redPin, HIGH);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(bluePin, LOW);
+}
+
+void parkingAvailable(){
+  float distance = getDistance();
+  Serial.println("Parking Available");
+  Serial.println(distance);
+      digitalWrite(redPin, LOW);
+  digitalWrite(greenPin, HIGH);
+  digitalWrite(bluePin, LOW);
+}
+
 void setup() {
   // -- Setting the pins --
   pinMode(redPin, OUTPUT);
