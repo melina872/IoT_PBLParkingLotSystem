@@ -36,7 +36,7 @@ void setup() {
 void loop() {
   // --- Initializing the function ---
   float distance = getDistance();
-  delay(1000);
+  delay(500);
 
   // --- LED Parking Conditions ---
   // -- When Parking Space Taken --
