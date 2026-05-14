@@ -35,7 +35,7 @@ void parkingAvailable(){
   float distance = getDistance();
   Serial.println("Parking Available");
   Serial.println(distance);
-      digitalWrite(redPin, LOW);
+  digitalWrite(redPin, LOW);
   digitalWrite(greenPin, HIGH);
   digitalWrite(bluePin, LOW);
 }
